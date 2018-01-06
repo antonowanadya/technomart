@@ -74,12 +74,22 @@
                 <div class="b-helper"></div>
             </div>
             <div class="b-options__inner2 clearfix">
-                <div class="b-options__slider">
-                    <div class="b-slider__title">Перфораторы</div>
-                    <div class="b-slider__text">Настоящие мужские игрушки</div>
-                    <a href="#" class="b-buttonr b-slider__button">открыть каталог</a>
-                    <a class="arrow-left"></a>
-                    <a class="arrow-right"></a>
+                <div class="b-options__slider b-slider js-slick">
+                    <div class="b-slider__i">
+                        <div class="b-slider__title">Перфораторы</div>
+                        <div class="b-slider__text">Настоящие мужские игрушки</div>
+                        <a href="#" class="b-buttonr b-slider__button">открыть каталог</a>
+                    </div>
+                    <div class="b-slider__i">
+                        <div class="b-slider__title">Перфораторы2</div>
+                        <div class="b-slider__text">Настоящие мужские игрушки</div>
+                        <a href="#" class="b-buttonr b-slider__button">открыть каталог</a>
+                    </div>
+                    <div class="b-slider__i">
+                        <div class="b-slider__title">Перфораторы3</div>
+                        <div class="b-slider__text">Настоящие мужские игрушки</div>
+                        <a href="#" class="b-buttonr b-slider__button">открыть каталог</a>
+                    </div>
                 </div>
 
                 <div class="b-options__item type-discount">
@@ -222,21 +232,50 @@
                 Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
             </div>
 
-            <div class="b-service__inner clearfix">
+            <div class="b-service__inner clearfix js-tabs">
                 <ul class="b-service__menu">
-                    <li class="b-service__item"><a href="#" class="b-service__link">Доставка</a></li>
-                    <li class="b-service__item"><a href="#" class="b-service__link">Гарантия</a></li>
-                    <li class="b-service__item"><a href="#" class="b-service__link">Кредит</a></li>
+                    <li class="b-service__item">
+                        <a href="#dostavka" data-tab-link class="b-service__link state-active">Доставка</a>
+                    </li>
+                    <li class="b-service__item">
+                        <a href="#garant" data-tab-link class="b-service__link">Гарантия</a>
+                    </li>
+                    <li class="b-service__item">
+                        <a href="#credit" data-tab-link class="b-service__link">Кредит</a>
+                    </li>
                 </ul>
-                <div class="b-service__deliv">
-                    <div class="b-deliv__title">Доставка</div>
-                    <div class="b-deliv__text">Мы с удовольствием доставим ваш товар прямо
-                        к вашему подъезду совершенно бесплатно!
-                        Ведь мы неплохо заработаем,
-                        поднимая его на ваш на этаж!
+                <div id="dostavka" data-tab-content>
+                    <div class="b-service__deliv">
+                        <div class="b-deliv__title">Доставка</div>
+                        <div class="b-deliv__text">Мы с удовольствием доставим ваш товар прямо
+                            к вашему подъезду совершенно бесплатно!
+                            Ведь мы неплохо заработаем,
+                            поднимая его на ваш на этаж!
+                        </div>
+                    </div>
+                    <div class="b-service__image"></div>
+                </div>
+                <div id="credit" data-tab-content class="h-hidden">
+                    <div class="b-service__deliv">
+                        <div class="b-deliv__title">Гарантия</div>
+                        <div class="b-deliv__text">Мы с удовольствием доставим ваш товар прямо
+                            к вашему подъезду совершенно бесплатно!
+                            Ведь мы неплохо заработаем,
+                            поднимая его на ваш на этаж!
+                        </div>
                     </div>
                 </div>
-                <div class="b-service__image"></div>
+                <div id="garant" data-tab-content class="h-hidden">
+                    <div class="b-service__deliv">
+                        <div class="b-deliv__title">Кредит</div>
+                        <div class="b-deliv__text">Мы с удовольствием доставим ваш товар прямо
+                            к вашему подъезду совершенно бесплатно!
+                            Ведь мы неплохо заработаем,
+                            поднимая его на ваш на этаж!
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -320,10 +359,14 @@
             <div class="b-footer__text">Обратная связь</div>
             <a href="#" class="b-footer__link">mail@htmlacademy.ru</a>
         </div>
-
     </div>
 </div>
-</div>
+
+<script type="text/javascript" src="js/libs/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/libs/slick.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+
 </body>
+</html>
 
 

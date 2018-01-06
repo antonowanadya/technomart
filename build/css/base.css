@@ -566,8 +566,6 @@ body {
   background: url(../images/image-worker.png);
   background-size: cover;
   position: relative;
-  padding: 21px 21px 21px 25px;
-  box-sizing: border-box;
 }
 .b-slider__title {
   font-size: 36px;
@@ -582,28 +580,38 @@ body {
   color: #ffffff;
   font-family: PT Sans Regular, Arial, sans-serif;
 }
-.arrow-left {
+.b-slider__i {
+  height: 266px !important;
+  padding: 21px 21px 21px 25px;
+  box-sizing: border-box;
+  position: relative;
+}
+.b-slider .slick-arrow {
   position: absolute;
   width: 22px;
   height: 40px;
+  bottom: 112px;
+  text-decoration: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  display: block;
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0);
+  z-index: 5;
+}
+.b-slider .slick-arrow:focus {
+  outline: none !important;
+}
+.b-slider .slick-prev {
   background: url(../images/icon-left.png);
   left: 24px;
-  bottom: 112px;
-  display: block;
-  text-decoration: none !important;
 }
-.arrow-right {
-  position: absolute;
-  width: 22px;
-  height: 40px;
+.b-slider .slick-next {
   background: url(../images/icon-right.png);
   right: 24px;
-  bottom: 112px;
-  display: block;
-  text-decoration: none !important;
 }
-.arrow-left:hover,
-.arrow-right:hover {
+.b-slider .slick-prev:hover,
+.b-slider .slick-next:hover {
   opacity: .8;
 }
 .b-buttonr {
@@ -752,6 +760,7 @@ body {
   display: inline-block;
   position: relative;
   box-shadow: 0 3px 0 0 #367315;
+  cursor: pointer;
 }
 .b-goods__inner {
   position: absolute;
@@ -854,10 +863,6 @@ body {
   width: 25.5%;
   position: relative;
 }
-.b-service__link:hover {
-  color: #32425c;
-  background: #ffffff;
-}
 .b-service__link {
   display: block;
   padding-top: 13px;
@@ -873,10 +878,17 @@ body {
   border-top: 1px solid #405069;
   box-sizing: border-box;
 }
-.b-service__link:hover:first-child {
+.b-service__link:hover,
+.b-service__link.state-active {
+  color: #32425c;
+  background: #ffffff;
+}
+.b-service__link:hover:first-child,
+.b-service__link.state-active:first-child {
   border-top: 1px solid #ffffff;
 }
-.b-service__link:hover:last-child {
+.b-service__link:hover:last-child,
+.b-service__link.state-active:last-child {
   border-bottom: 1px solid #ffffff;
 }
 .b-service__menu:after {
@@ -900,7 +912,7 @@ body {
 .b-deliv__text {
   font-size: 13px;
   line-height: 2;
-  font-family: PT Sans Regular, Arial, sans-serif;
+  font-family: "PT Sans Regular", Arial, sans-serif;
 }
 .b-service__inner {
   position: relative;
@@ -1404,6 +1416,9 @@ body {
   line-height: 1.6;
   font-family: PT Sans Regular, Arial, sans-serif;
 }
+.h-hidden {
+  display: none;
+}
 .b-footer {
   background: #293449;
   padding: 36px 0 30px 0;
@@ -1641,6 +1656,90 @@ body {
 .input-header::placeholder {
   color: #ffffff;
   font-family: Cuprum, Arial, sans-serif;
+}
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.slick-list:focus {
+  outline: none;
+}
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after {
+  display: table;
+  content: '';
+}
+.slick-track:after {
+  clear: both;
+}
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+}
+[dir='rtl'] .slick-slide {
+  float: right;
+}
+.slick-slide img {
+  display: block;
+}
+.slick-slide.slick-loading img {
+  display: none;
+}
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+.slick-initialized .slick-slide {
+  display: block;
+}
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+  display: none;
 }
 @media print {
   * {
